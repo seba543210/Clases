@@ -9,11 +9,16 @@
 
 # Reading an exporting data
 
+library(tidyverse)
+library(data.table)
+
 library(readxl)
 
-casos<-data.table(read_excel("Class_02/2020-03-17-Casos-confirmados.xlsx",na = "—",trim_ws = TRUE,col_names = TRUE),stringsAsFactors = FALSE)
+casos<-data.table(read_excel("C:/Users/sebastian/Desktop/SPACE ANALYTICS/Clases-master/Clases/Class_02/2020-03-17-Casos-confirmados.xlsx",na = "—",trim_ws = TRUE,col_names = TRUE),stringsAsFactors = FALSE)
 
-casos<-casos[Región=="Metropolitana",]
+#casos<-data.table(read_excel("Class_02/2020-03-17-Casos-confirmados.xlsx",na = "—",trim_ws = TRUE,col_names = TRUE),stringsAsFactors = FALSE)
+
+casos<-casos[RegiOn=="Metropolitana",]
 
 saveRDS
 
